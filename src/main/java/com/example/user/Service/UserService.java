@@ -24,6 +24,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public List<User> getAllusers() {
+        return userRepository.findAll();
+    }
+
     // Update user by ID
     public User updateUser(int id, User updatedUser) {
         Optional<User> existingUser = userRepository.findById(id);

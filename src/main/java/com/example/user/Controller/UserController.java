@@ -37,6 +37,11 @@ public class UserController {
         return userService.getUsers();
     }
 
+    @GetMapping("/getAllUsers")
+    public List<User> getAllusers(){
+        return userService.getAllusers();
+    }
+
     @PutMapping("/update/{id}")
     public User updateUser(@PathVariable int id, @RequestBody User user, @RequestHeader("Authorization") String token) {
         validateToken(token);
